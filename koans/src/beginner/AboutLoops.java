@@ -159,13 +159,14 @@ public class AboutLoops {
                     break outerLabel;
                 }
             }
-            count += 10;
+            count += 10; // this line of code doesnot execute because break command will terminate the for loop
         }
         // What does break with a label mean?
         // What gets executed? Where does the program flow continue?
+
         assertEquals(count, 3);
     }
 }
 
 
-// done 
+// done
