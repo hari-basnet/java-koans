@@ -183,4 +183,6 @@ public class AboutStrings {
     public void insufficientArgumentsToMessageFormatDoesNotReplaceTheToken() {
         assertEquals(MessageFormat.format("{0} {1} {0}", "a"), "a {1} a");
     }
+
+    // this is done
 }

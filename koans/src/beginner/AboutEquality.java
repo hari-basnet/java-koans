@@ -54,5 +54,4 @@ public class AboutEquality {
         assertEquals(obj.equals(obj), true);
     }
 
-    // done
 }

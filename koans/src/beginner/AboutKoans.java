@@ -19,5 +19,4 @@ public class AboutKoans {
             fail("what if koanIsComplete variable was true?");
         }
     }
-    // done
 }
