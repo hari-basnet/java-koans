@@ -26,7 +26,10 @@ public class AboutConstructors {
 
     @Koan
     public void simpleConstructorOrder() {
-        assertEquals(new B().someString, __);
+        assertEquals(new B().someString, "axg");
+        // since constructor inititalizes variable
+        // instantiating B would invoke A's constructor whose initial value is a and then it adds x to it
+        // which is eventually added g to it from B
     }
 
     class Aa {
@@ -48,11 +51,14 @@ public class AboutConstructors {
         }
 
     }
-    // this is test 
 
     @Koan
     public void complexConstructorOrder() {
-        assertEquals(new Bb().someString, __);
+        assertEquals(new Bb().someString, "aBoog");
     }
+
+    // Here in my understanding since the Bb class extends Aa and it has two constructor methods
+    // when the super is called with a argument only that method is called
+    // and then the g is added 
 
 }
