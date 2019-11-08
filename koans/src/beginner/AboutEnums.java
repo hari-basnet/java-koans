@@ -9,22 +9,26 @@ public class AboutEnums {
 
 
     enum Colors {
-        Red, Blue, Green, Yellow // what happens if you add a ; here?
+        Red, Blue, Green, Yellow; // what happens if you add a ; here?
         // What happens if you type Red() instead?
+
+        // compiler complains invalid method declaration return type required
+        // if we specfify paranthesis we might as well give the value
+
     }
 
     @Koan
     public void basicEnums() {
         Colors blue = Colors.Blue;
-        assertEquals(blue == Colors.Blue, __);
-        assertEquals(blue == Colors.Red, __);
-        assertEquals(blue instanceof Colors, __);
+        assertEquals(blue == Colors.Blue, true);
+        assertEquals(blue == Colors.Red, false);
+        assertEquals(blue instanceof Colors, true); // blue is an instance of colors
     }
 
     @Koan
     public void basicEnumsAccess() {
         Colors[] colorArray = Colors.values();
-        assertEquals(colorArray[2], __);
+        assertEquals(colorArray[2], Colors.valueOf("Green"));
     }
 
     enum SkatSuits {
@@ -36,6 +40,7 @@ public class AboutEnums {
 
         private int value;
     }
+        // dont know why need to call Class.valueof("Green")
 
     @Koan
     public void enumsWithAttributes() {

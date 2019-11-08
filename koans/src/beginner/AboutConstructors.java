@@ -59,6 +59,6 @@ public class AboutConstructors {
 
     // Here in my understanding since the Bb class extends Aa and it has two constructor methods
     // when the super is called with a argument only that method is called
-    // and then the g is added 
+    // and then the g is added
 
 }
