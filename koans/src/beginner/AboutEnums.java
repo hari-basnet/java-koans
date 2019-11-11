@@ -31,7 +31,15 @@ public class AboutEnums {
         assertEquals(colorArray[2], Colors.valueOf("Green"));
     }
 
+    enum SkatSuits {
+        Clubs(12), Spades(11), Hearts(10), Diamonds(9);
 
+        SkatSuits(int v) {
+            value = v;
+        }
+
+        private int value;
+    }
         // dont know why need to call Class.valueof("Green")
 
     @Koan
