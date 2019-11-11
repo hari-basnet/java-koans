@@ -63,5 +63,5 @@ public class AboutBitwiseOperators {
         unsignedRightShift >>>= 4; // Just like +=
         assertEquals(unsignedRightShift, 134217728);
     }
-    // done 
+    // done
 }
