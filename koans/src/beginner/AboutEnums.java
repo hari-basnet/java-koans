@@ -31,15 +31,7 @@ public class AboutEnums {
         assertEquals(colorArray[2], Colors.valueOf("Green"));
     }
 
-    enum SkatSuits {
-        Clubs(12), Spades(11), Hearts(10), Diamonds(9);
 
-        SkatSuits(int v) {
-            value = v;
-        }
-
-        private int value;
-    }
         // dont know why need to call Class.valueof("Green")
 
     @Koan
@@ -47,7 +39,7 @@ public class AboutEnums {
         // value is private but we still can access it. Why?
         // Try moving the enum outside the AboutEnum class... What do you expect?
         // What happens?
-        assertEquals(SkatSuits.Clubs.value > SkatSuits.Spades.value, __);
+        assertEquals(SkatSuits.Clubs.value > SkatSuits.Spades.value, true);
     }
 
     enum OpticalMedia {
@@ -66,7 +58,7 @@ public class AboutEnums {
 
     @Koan
     public void enumsWithMethods() {
-        assertEquals(OpticalMedia.CD.getCoolnessFactor(), __);
-        assertEquals(OpticalMedia.BluRay.getCoolnessFactor(), __);
+        assertEquals(OpticalMedia.CD.getCoolnessFactor(), -3500);
+        assertEquals(OpticalMedia.BluRay.getCoolnessFactor(), 490000);
     }
 }
